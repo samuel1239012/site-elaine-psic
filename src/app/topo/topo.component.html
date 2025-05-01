@@ -1,0 +1,40 @@
+<div class="topo">
+  <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+    <a routerLink="/home" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+      <img src="assets/images/logo-site.png" style="width: 40px; height: auto;" alt="Flor" />
+      <h6>Elaime Fátima </h6>
+      <strong style="margin-left: 5px;"> CRP: 06/215165</strong>
+    </a>
+
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a routerLink="/home" class="nav-link" [class.active]="isActive('home')" (click)="setActive('home')">
+          Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a routerLink="/sobre-nos" class="nav-link" [class.active]="isActive('sobre-nos')" (click)="setActive('sobre-nos')">
+          Sobre Nós
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#precos" class="nav-link" [class.active]="isActive('precos')" [class.disabled]="isActive('sobre-nos')" (click)="scrollToPrecos($event)" (click)="setActive('precos')">Sessões e Valores</a>
+      </li> 
+
+      <li class="nav-item">
+        <a href="#duvidas" class="nav-link" [class.active]="isActive('duvidas')" [class.disabled]="isActive('sobre-nos')" (click)="setActive('duvidas')" (click)="scrollToDuvidas($event)">
+          Dúvidas Frequentes
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="https://wa.me/5511920907849" target="_blank" rel="noopener noreferrer" class="nav-link">
+          Agende uma Consulta
+        </a>
+      </li>
+
+    </ul>
+  </header>
+</div>

@@ -1,0 +1,167 @@
+/* Estilo base */
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: #D8BFD8;
+    padding: 20px 0;
+    
+    // /* Adicionando imagem de fundo */
+    // background-image: url('../../assets/images/sala-psych.jpg');
+    // background-size: cover;
+    // background-position: center;
+    // background-attachment: fixed; /* Paralaxe */
+}
+
+// .container{
+
+
+//     width: 100vw; /* Ocupa toda a largura da tela */
+//     // min-height: 100vh; /* Mantém altura proporcional ao conteúdo */
+    
+//     background-image: url('../../assets/images/sala-psych.jpg');
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat; /* Evita repetição da imagem */
+    
+    
+// }
+/* Apresentação */
+.apresentacao {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 40px;
+    flex-wrap: wrap;
+    background: rgba(255, 255, 255, 0.85); /* Fundo semi-transparente para melhor leitura */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* Opacidade da camada de fundo */
+        url('../../assets/images/sala-psych.jpg'); /* Sua imagem de fundo */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+
+    // Foto de <a href="https://unsplash.com/pt-br/@mindyj?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">MINDY JACOBS</a> na <a href="https://unsplash.com/pt-br/fotografias/dois-travesseiros-brancos-em-cima-do-sofa-cinza-hAh4Unn50gk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+}
+
+
+/* Configuração da seção Home */
+#home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Texto e Lista */
+.apresentation {
+    max-width: 500px;
+    text-align: left;
+}
+
+.apresentation h4 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.apresentation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.apresentation ul li {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 5px 0;
+}
+
+/* Ícones */
+.icon {
+    display: flex;
+    gap: 15px;
+    margin-left: 100px;
+}
+
+.icon a {
+    font-size: 28px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.icon a:hover {
+    transform: scale(1.2);
+    color: #0077b5;
+}
+
+/* Imagem */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 250px;
+    z-index: 2;
+    margin-top: -40px;
+}
+
+/* Caixa de fundo atrás da imagem */
+.background-box {
+    width: 100%;
+    max-width: 250px;
+    height: 280px;
+    // background-color: rgba(216, 191, 216, 0.8); /* Fundo com transparência */
+    // box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    z-index: 1;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .apresentacao {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .apresentation {
+        max-width: 100%;
+    }
+
+    .image-container {
+        width: 80%;
+    }
+
+    .image-container img {
+        max-width: 180px;
+    }
+
+    .background-box {
+        max-width: 180px;
+        height: 180px;
+    }
+
+    .apresentation h4 {
+        font-size: 1.5rem;
+    }
+
+    .apresentation ul li {
+        font-size: 1rem;
+    }
+
+    .icon a {
+        font-size: 24px;
+    }
+}

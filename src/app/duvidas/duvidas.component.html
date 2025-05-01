@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="container">
+        <br>
+        <h1>Dúvidas Frequentes</h1>
+    </div>
+
+      <div class="filter-buttons">
+        <button class="btn btn-outline-primary" (click)="filterCards('servicos')">Sobre os Serviços</button>
+        <button class="btn btn-outline-primary" (click)="filterCards('terapia')">Sobre a Terapia</button>
+        <button class="btn btn-outline-primary" (click)="filterCards('pagamento')">Pagamento e Planos</button>
+        <button class="btn btn-outline-primary" (click)="filterCards('privacidade')">Privacidade</button>
+      </div>
+      
+      <div class="cards" *ngIf="showCards">
+        <div class="card" *ngFor="let question of filteredQuestions" (click)="toggleAnswer(question)">
+          <h5>{{ question.title }}</h5>
+          <p *ngIf="question.showAnswer">{{ question.answer }}</p>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,20 @@
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: #D8BFD8;
+    }
+  
+    .topo{
+      display: flex;
+      width: 100%;
+  
+      app-topo {
+        width: 100%;
+        background-color: #D8BFD8;
+      }
+  
+  }
+
+html {
+  scroll-behavior: smooth;
+}

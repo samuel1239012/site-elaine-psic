@@ -1,0 +1,53 @@
+.container-fluid {
+    display: flex;
+    flex-direction: column;
+    background-color: #D8BFD8;
+    padding: 20px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: grid; /* Usando grid para os cards */
+    grid-template-columns: repeat(3, 0.2fr); /* 3 colunas com 0.2fr em telas grandes */
+    justify-content: center;
+    gap: 20px; /* Adiciona espaçamento entre os cards */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+   
+}
+
+.cards div{
+    transition: all 0.3s ease;
+}
+.cards div:hover{
+    // position: relative;
+    transform: translateY(-5px); /* Move o card para cima */
+    box-shadow: 20px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em telas médias (tablets) */
+    }
+}
+
+/* Responsividade para telas muito pequenas (menor que 480px) */
+@media (max-width: 480px) {
+    .cards {
+        grid-template-columns: 1fr; /* 1 coluna em telas muito pequenas (celulares) */
+    }
+}
+
+.simples, .medio, .alto {
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto; /* Centraliza os cards */
+}
